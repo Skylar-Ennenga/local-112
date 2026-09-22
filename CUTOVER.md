@@ -112,12 +112,13 @@ M7-04.**
 ## Applying migrations
 
 Schema changes are **never** made by clicking in the Supabase dashboard.
-Every change is a committed migration file.
+Every change is a migration file committed to `supabase/migrations/`, so the
+repository is the complete record of how the schema got to its current state.
 
-```bash
-supabase login
-supabase link --project-ref <project-ref>
-supabase db push
-```
+Migrations are **authored in the repo and applied by the project owner**
+against Supabase. A migration is ready to apply once its pull request has
+merged into `develop`.
 
-The project ref is the subdomain of `NEXT_PUBLIC_SUPABASE_URL`.
+| Migration  | Applied | Notes                                       |
+| ---------- | ------- | ------------------------------------------- |
+| _none yet_ | —       | First migration lands with M1-01 (`locals`) |
