@@ -1,0 +1,14 @@
+# Normalize to LF in the repository and in the working copy on every
+# platform. Without this, Windows checkouts get CRLF and Prettier's
+# endOfLine: "lf" default fails locally while Linux CI stays green.
+* text=auto eol=lf
+
+# Binary files must not be touched.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
