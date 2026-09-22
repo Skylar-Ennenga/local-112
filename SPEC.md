@@ -47,7 +47,7 @@ Payments and dues collection (stays on Venmo). Payroll (UTP handles it). Anythin
 | Concern                   | Choice                                    |
 | ------------------------- | ----------------------------------------- |
 | Framework                 | Next.js, App Router, TypeScript           |
-| Styling                   | Tailwind                                  |
+| Styling                   | Tailwind v4 + shadcn/ui (Base UI)         |
 | Hosting                   | Vercel (`iad1`)                           |
 | Database / auth / storage | Supabase (`us-east-1`)                    |
 | Transactional email       | Resend                                    |
