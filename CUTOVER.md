@@ -119,6 +119,14 @@ Migrations are **authored in the repo and applied by the project owner**
 against Supabase. A migration is ready to apply once its pull request has
 merged into `develop`.
 
-| Migration  | Applied | Notes                                       |
-| ---------- | ------- | ------------------------------------------- |
-| _none yet_ | —       | First migration lands with M1-01 (`locals`) |
+| Migration                          | Applied | Notes                                |
+| ---------------------------------- | ------- | ------------------------------------ |
+| `20260926140000_create_locals.sql` | ☐       | `locals` table + RLS (public read)   |
+| `20260926140100_seed_local.sql`    | ☐       | The one local this deployment serves |
+
+After applying, regenerate the database types so application code is typed
+against the real schema:
+
+```bash
+npm run types
+```
